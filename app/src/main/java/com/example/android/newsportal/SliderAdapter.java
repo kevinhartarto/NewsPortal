@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -18,13 +19,15 @@ public class SliderAdapter extends PagerAdapter{
     //private variables
     private ArrayList<Integer> images;
     private LayoutInflater inflater;
+    private ArrayList<String> arrNewsTitle;
     private Context context;
 
     //constructor
-    public SliderAdapter(ArrayList<Integer> images, Context context) {
+    public SliderAdapter(ArrayList<Integer> images, Context context, ArrayList<String> arrNewsTitle) {
         this.context = context;
         this.images = images;
         this.inflater = LayoutInflater.from(context);
+        this.arrNewsTitle = arrNewsTitle;
     }
 
     @Override
@@ -39,10 +42,12 @@ public class SliderAdapter extends PagerAdapter{
 
     @Override
     public Object instantiateItem(ViewGroup view, int position) {
-        View myImageLayout = inflater.inflate(R.layout.slide, view, false);
+        View myImageLayout = inflater.inflate(R.layout.slider, view, false);
         ImageView myImage = (ImageView) myImageLayout
                 .findViewById(R.id.image);
+        TextView newsTitle = (TextView) myImageLayout.findViewById(R.id.textView_newsTitle);
         myImage.setImageResource(images.get(position));
+        newsTitle.setText(arrNewsTitle.get(position));
         view.addView(myImageLayout, 0);
         return myImageLayout;
     }
