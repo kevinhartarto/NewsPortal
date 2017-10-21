@@ -4,6 +4,7 @@ import android.os.Handler;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ListView;
 
 import me.relex.circleindicator.CircleIndicator;
 import java.util.ArrayList;
@@ -19,6 +20,10 @@ public class MainActivity extends AppCompatActivity {
     private static final String[] titles = {"Kapal jadul jadi kenangan", "Game buatan mahasiswa", "Ayo terbang ke Eropa"};
     private ArrayList<Integer> arrImages = new ArrayList<Integer>();
     private ArrayList<String> arrNewsTitle =  new ArrayList<String>();
+    private ArrayList<News> arrNews = new ArrayList<News>();
+
+    ListView kontenBerita;
+    NewsMainPageItemAdapter newsAdapter;
 
 
     @Override
@@ -26,8 +31,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //carousel initialization
+        //Carousel initialization
         initSlider();
+
+        //News Content initialization
+        kontenBerita = (ListView) findViewById(R.id.listView_beritaTerkini);
+        initNews();
     }
 
     private void initSlider(){
@@ -60,5 +69,18 @@ public class MainActivity extends AppCompatActivity {
                 handler.post(Update);
             }
         }, 2500, 2500);
+    }
+
+    public void initNews(){
+        //dummy data
+        News berita1 = new News(1, R.drawable.ship, "Kapal jadul jadi kenangan", "masih kosong", "21-Oktober-2017", "kevin", "nasional");
+        News berita2 = new News(2, R.drawable.soerabaja, "Game buatan mahasiswa", "masih kosong", "21-Oktober-2017", "kevin", "entertaiment");
+        News berita3 = new News(3, R.drawable.windmill, "Ayo terbang ke Eropa", "masih kosong", "21-Oktober-2017", "kevin", "lifestyle");
+
+        arrNews.add(berita1);
+        arrNews.add(berita2);
+        arrNews.add(berita3);
+        newsAdapter = new NewsMainPageItemAdapter(this, arrNews);
+        kontenBerita.setAdapter(newsAdapter);
     }
 }
