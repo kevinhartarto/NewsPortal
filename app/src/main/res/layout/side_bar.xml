@@ -3,232 +3,346 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#fff">
+    android:background="#eee"
+    android:orientation="vertical">
 
-    <LinearLayout
-        android:id="@+id/home"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="horizontal"
-        android:padding="10dp">
+        android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/hamburgerside"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:srcCompat="@drawable/hamburger" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/txthome"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:layout_marginLeft="6dp"
-            android:text="Home"
-            android:textColor="#000"
-            android:textSize="30sp" />
-    </LinearLayout>
+            <LinearLayout
+                android:id="@+id/home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
 
-    <LinearLayout
-        android:id="@+id/nasional"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="horizontal"
-        android:padding="10dp">
+                <ImageView
+                    android:id="@+id/hamburgerside"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    app:srcCompat="@drawable/hamburger" />
 
-        <ImageView
-            android:id="@+id/picnasional"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:srcCompat="@drawable/nasional" />
+                <TextView
+                    android:id="@+id/txthome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="6dp"
+                    android:text="Home"
+                    android:textColor="#000"
+                    android:textSize="24sp" />
+            </LinearLayout>
 
-        <TextView
-            android:id="@+id/txtnasional"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:layout_marginLeft="6dp"
-            android:text="Nasional"
-            android:textColor="#000"
-            android:textSize="30sp" />
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#aaa"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"></LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/internasional"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="horizontal"
-        android:padding="10dp">
+            <LinearLayout
+                android:id="@+id/nasional"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
 
-        <ImageView
-            android:id="@+id/picinternasional"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:srcCompat="@drawable/internasional" />
+                <ImageView
+                    android:id="@+id/picnasional"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    app:srcCompat="@drawable/nasional" />
 
-        <TextView
-            android:id="@+id/txtinternasional"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:layout_marginLeft="6dp"
-            android:text="Internasional"
-            android:textColor="#000"
-            android:textSize="30sp" />
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/txtnasional"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="6dp"
+                    android:text="Nasional"
+                    android:textColor="#000"
+                    android:textSize="24sp" />
+            </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/olahraga"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="horizontal"
-        android:padding="10dp">
+            <LinearLayout
+                android:id="@+id/internasional"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
 
-        <ImageView
-            android:id="@+id/picolahraga"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:srcCompat="@drawable/olahraga" />
+                <ImageView
+                    android:id="@+id/picinternasional"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    app:srcCompat="@drawable/internasional" />
 
-        <TextView
-            android:id="@+id/txtolahraga"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:layout_marginLeft="6dp"
-            android:text="Olahraga"
-            android:textColor="#000"
-            android:textSize="30sp" />
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/txtinternasional"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="6dp"
+                    android:text="Internasional"
+                    android:textColor="#000"
+                    android:textSize="24sp" />
+            </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/teknologi"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="horizontal"
-        android:padding="10dp">
+            <LinearLayout
+                android:id="@+id/olahraga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
 
-        <ImageView
-            android:id="@+id/picteknologi"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:srcCompat="@drawable/teknologi" />
+                <ImageView
+                    android:id="@+id/picolahraga"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    app:srcCompat="@drawable/olahraga" />
 
-        <TextView
-            android:id="@+id/txtteknologi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:layout_marginLeft="6dp"
-            android:text="Teknologi"
-            android:textColor="#000"
-            android:textSize="30sp" />
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/txtolahraga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="6dp"
+                    android:text="Olahraga"
+                    android:textColor="#000"
+                    android:textSize="24sp" />
+            </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/otomotif"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="horizontal"
-        android:padding="10dp">
+            <LinearLayout
+                android:id="@+id/teknologi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
 
-        <ImageView
-            android:id="@+id/picotomotif"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:srcCompat="@drawable/otomotif" />
+                <ImageView
+                    android:id="@+id/picteknologi"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    app:srcCompat="@drawable/teknologi" />
 
-        <TextView
-            android:id="@+id/txtotomotif"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:layout_marginLeft="6dp"
-            android:text="Otomotif"
-            android:textColor="#000"
-            android:textSize="30sp" />
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/txtteknologi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="6dp"
+                    android:text="Teknologi"
+                    android:textColor="#000"
+                    android:textSize="24sp" />
+            </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/travel"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="horizontal"
-        android:padding="10dp">
+            <LinearLayout
+                android:id="@+id/otomotif"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
 
-        <ImageView
-            android:id="@+id/pictravel"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:srcCompat="@drawable/travel" />
+                <ImageView
+                    android:id="@+id/picotomotif"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    app:srcCompat="@drawable/otomotif" />
 
-        <TextView
-            android:id="@+id/txttravel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:layout_marginLeft="6dp"
-            android:text="Travel"
-            android:textColor="#000"
-            android:textSize="30sp" />
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/txtotomotif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="6dp"
+                    android:text="Otomotif"
+                    android:textColor="#000"
+                    android:textSize="24sp" />
+            </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/ekonomi"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="horizontal"
-        android:padding="10dp">
+            <LinearLayout
+                android:id="@+id/travel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
 
-        <ImageView
-            android:id="@+id/picekonomi"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:srcCompat="@drawable/ekonomi" />
+                <ImageView
+                    android:id="@+id/pictravel"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    app:srcCompat="@drawable/travel" />
 
-        <TextView
-            android:id="@+id/txtekonomi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:layout_marginLeft="6dp"
-            android:text="Ekonomi"
-            android:textColor="#000"
-            android:textSize="30sp" />
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/txttravel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="6dp"
+                    android:text="Travel"
+                    android:textColor="#000"
+                    android:textSize="24sp" />
+            </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/lifestyle"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="horizontal"
-        android:padding="10dp">
+            <LinearLayout
+                android:id="@+id/ekonomi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
 
-        <ImageView
-            android:id="@+id/piclifestyle"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:srcCompat="@drawable/lifestyle" />
+                <ImageView
+                    android:id="@+id/picekonomi"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    app:srcCompat="@drawable/ekonomi" />
 
-        <TextView
-            android:id="@+id/txtlifestyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:layout_marginLeft="6dp"
-            android:text="Lifestyle"
-            android:textColor="#000"
-            android:textSize="30sp" />
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/txtekonomi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="6dp"
+                    android:text="Ekonomi"
+                    android:textColor="#000"
+                    android:textSize="24sp" />
+            </LinearLayout>
 
+            <LinearLayout
+                android:id="@+id/lifestyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/piclifestyle"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    app:srcCompat="@drawable/lifestyle" />
+
+                <TextView
+                    android:id="@+id/txtlifestyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="6dp"
+                    android:text="Lifestyle"
+                    android:textColor="#000"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#aaa"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"></LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/loginout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/picloginout"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    app:srcCompat="@drawable/login" />
+
+                <TextView
+                    android:id="@+id/txtloginout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="6dp"
+                    android:text="Login"
+                    android:textColor="#000"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/picsetting"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    app:srcCompat="@drawable/setting" />
+
+                <TextView
+                    android:id="@+id/txtsetting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="6dp"
+                    android:text="Setting"
+                    android:textColor="#000"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/picabout"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    app:srcCompat="@drawable/about" />
+
+                <TextView
+                    android:id="@+id/txtabout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="6dp"
+                    android:text="About"
+                    android:textColor="#000"
+                    android:textSize="24sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

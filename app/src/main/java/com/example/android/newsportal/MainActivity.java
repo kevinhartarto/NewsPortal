@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
     NewsMainPageItemAdapter newsAdapter;
     ImageView hamburgertop, hamburgerside;
     LinearLayout sidebar;
-    TextView appname;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
         hamburgertop = (ImageView) findViewById(R.id.hamburgertop);
         hamburgerside = (ImageView) findViewById(R.id.hamburgerside);
         sidebar = (LinearLayout) findViewById(R.id.sidebar);
-        appname = (TextView) findViewById(R.id.appname);
 
         hamburgertop.setOnClickListener(new View.OnClickListener() {
             @Override
