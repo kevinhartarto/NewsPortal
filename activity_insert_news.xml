@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.newsportal.InsertNews">
+
+
+    <include
+        android:id="@+id/actionbar"
+        layout="@layout/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <include
+        android:id="@+id/sidebar"
+        layout="@layout/side_bar"
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/titleName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/actionbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:text="Hello, Nama User !" />
+
+    <TextView
+        android:id="@+id/opening"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:text="We are very happy with your news. Please input your news."
+        android:textAlignment="center"/>
+
+
+    <EditText
+        android:id="@+id/editTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/opening"
+        android:layout_marginTop="30dp"
+        android:inputType="textPersonName"
+        android:hint="Your News Title"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:id="@+id/editDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTitle"
+        android:layout_marginTop="10dp"
+        android:inputType="textPersonName"
+        android:hint="MM/DD/YYYY"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_below="@+id/editDate"
+        android:id="@+id/news"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
+        android:inputType="text|textMultiLine"
+        android:gravity="top"
+        android:hint="                            Your News Here" />
+
+    <Button
+        android:id="@+id/buttonSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Next"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"/>
+
+
+</RelativeLayout>
