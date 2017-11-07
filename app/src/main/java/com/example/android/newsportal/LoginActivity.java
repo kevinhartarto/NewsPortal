@@ -1,4 +1,4 @@
-package com.example.windows10.projectmobileappslogin;
+package com.example.android.newsportal;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -17,7 +17,7 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
-import com.example.windows10.projectmobileappslogin.AppController;
+import com.example.android.newsportal.AppController;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -84,7 +84,7 @@ public class LoginActivity extends AppCompatActivity {
         em = sharedpreferences.getString(TAG_EMAIL, null);
 
         if (session) {
-            Intent intent = new Intent(MainActivity.this, register.class); //yang .class diganti ke class yang mau ditampilkan setelah login
+            Intent intent = new Intent(LoginActivity.this, Register.class); //yang .class diganti ke class yang mau ditampilkan setelah login
             intent.putExtra(TAG_ID, id);
             intent.putExtra(TAG_EMAIL, em);
             finish();
@@ -119,7 +119,7 @@ public class LoginActivity extends AppCompatActivity {
         regis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(MainActivity.this, register.class);
+                intent = new Intent(LoginActivity.this, Register.class);
                 finish();
                 startActivity(intent);
             }
@@ -162,7 +162,7 @@ public class LoginActivity extends AppCompatActivity {
 //                        editor.commit();
 
                         // Memanggil main activity
-                        Intent intent = new Intent(MainActivity.this, register.class); //ganti yg .class ke kelas selanjutnya setelah login
+                        Intent intent = new Intent(LoginActivity.this, Register.class); //ganti yg .class ke kelas selanjutnya setelah login
                         intent.putExtra(TAG_ID, id);
                         intent.putExtra(TAG_EMAIL, email);
                         finish();

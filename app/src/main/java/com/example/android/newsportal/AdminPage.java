@@ -65,7 +65,7 @@ public class AdminPage extends AppCompatActivity {
                 // set item width
                 deleteItem.setWidth((200));
                 // set a icon
-                deleteItem.setIcon(R.drawable.ic_delete);
+//                deleteItem.setIcon(R.drawable.ic_delete);
                 // add to menu
                 menu.addMenuItem(deleteItem);
             }

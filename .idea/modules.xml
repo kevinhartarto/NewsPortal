@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/UAS2.iml" filepath="$PROJECT_DIR$/UAS2.iml" />
       <module fileurl="file://D:\AndroidStudio\newsportal\UAS2.iml" filepath="D:\AndroidStudio\newsportal\UAS2.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/newsportal.iml" filepath="$PROJECT_DIR$/newsportal.iml" />
       <module fileurl="file://D:\Tugas\AndroidStudio\UAS2\newsportal.iml" filepath="D:\Tugas\AndroidStudio\UAS2\newsportal.iml" />
     </modules>
   </component>

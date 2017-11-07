@@ -55,10 +55,11 @@ public class Login extends AppCompatActivity {
     public static final String session_status = "session_status";
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.login);
 
         conMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         {
@@ -118,7 +119,7 @@ public class Login extends AppCompatActivity {
         regis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(Login.this, MainActivity.class);
+                intent = new Intent(Login.this, Register.class);
                 finish();
                 startActivity(intent);
             }

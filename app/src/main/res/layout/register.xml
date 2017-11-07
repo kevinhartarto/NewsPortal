@@ -130,17 +130,6 @@
         android:layout_below="@+id/editText_repassword"
         android:text="Register"
         android:layout_marginTop="30dp"
-        android:layout_marginLeft="250dp"/><include
-    android:id="@+id/actionbar"
-    layout="@layout/action_bar"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content" />
-
-    <include
-        android:id="@+id/sidebar"
-        layout="@layout/side_bar"
-        android:layout_width="250dp"
-        android:layout_height="match_parent"
-        android:visibility="gone" />
+        android:layout_marginLeft="250dp"/>
 
 </RelativeLayout>

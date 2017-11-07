@@ -10,15 +10,13 @@
     <ImageView
         android:id="@+id/imageView_background"
         android:layout_width="wrap_content"
-        android:layout_height="200dp"
-        android:background="@drawable/mist" />
+        android:layout_height="200dp" />
 
     <ImageView
         android:id="@+id/imageView_user"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginTop="96dp"
-        app:srcCompat="@drawable/round"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
@@ -37,7 +35,6 @@
         android:layout_height="40dp"
         android:layout_marginLeft="130dp"
         android:layout_marginTop="23dp"
-        android:background="@drawable/Prrofile"
         android:layout_below="@+id/imageView_user"
 
         />
@@ -48,7 +45,6 @@
         android:layout_height="40dp"
         android:layout_marginLeft="130dp"
         android:layout_marginTop="30dp"
-        android:background="@drawable/email"
         android:layout_below="@+id/imageView_userLogo"
         />
 

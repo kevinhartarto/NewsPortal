@@ -23,5 +23,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".NewsContent">
+        </activity>
+        <activity android:name=".Login">
+        </activity>
+        <activity android:name=".Register">
+        </activity>
     </application>
 </manifest>

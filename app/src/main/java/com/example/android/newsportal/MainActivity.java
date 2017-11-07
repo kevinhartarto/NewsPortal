@@ -1,10 +1,12 @@
 package com.example.android.newsportal;
 
+import android.content.Intent;
 import android.os.Handler;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -31,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     ListView kontenBerita;
     NewsMainPageItemAdapter newsAdapter;
     ImageView hamburgertop, hamburgerside;
-    LinearLayout sidebar;
+    LinearLayout sidebar, login;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
 
         sidebar(hamburgertop, hamburgerside, sidebar);
         initNews();
+
+
     }
 
 
@@ -66,6 +70,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 finalSidebar.setVisibility(View.GONE);
+            }
+        });
+
+        login = (LinearLayout) findViewById(R.id.loginout);
+
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Login.class); //yang .class diganti ke class yang mau ditampilkan setelah login
+                startActivity(intent);
             }
         });
     }
@@ -101,6 +115,14 @@ public class MainActivity extends AppCompatActivity {
                 handler.post(Update);
             }
         }, 2500, 2500);
+
+        mPager.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, NewsContent.class); //yang .class diganti ke class yang mau ditampilkan setelah login
+                startActivity(intent);
+            }
+        });
     }
 
     public void initNews() {
@@ -118,5 +140,13 @@ public class MainActivity extends AppCompatActivity {
         arrNews.add(berita5);
         newsAdapter = new NewsMainPageItemAdapter(this, arrNews);
         kontenBerita.setAdapter(newsAdapter);
+
+        kontenBerita.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(MainActivity.this, NewsContent.class); //yang .class diganti ke class yang mau ditampilkan setelah login
+                startActivity(intent);
+            }
+        });
     }
 }
