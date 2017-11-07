@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/actionbar"
+        layout="@layout/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <include
+        android:id="@+id/sidebar"
+        layout="@layout/side_bar"
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/titleName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/actionbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:text="Hello, Nama User !" />
+
+    <TextView
+        android:id="@+id/opening"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:text="Just one more step before we load our news"
+        android:textAlignment="center"/>
+
+
+    <TextView
+        android:id="@+id/openingSecond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/opening"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:text="Please Upload Your News Image Now "
+        android:textAlignment="center"/>
+
+    <Button
+        android:id="@+id/buttonUpload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/openingSecond"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:text="Select Picture"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/namefile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonUpload"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:text="Your Picture Name is Forest.jpg"
+        android:textAlignment="center"/>
+
+    <Button
+        android:id="@+id/buttonSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/namefile"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:text="Send"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold" />
+
+
+
+</RelativeLayout>
